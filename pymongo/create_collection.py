@@ -1,16 +1,9 @@
-
 from pymongo import MongoClient
-
-cars = [ {'name': 'Audi', 'price': 52642},
-            {'name': 'Mercedes', 'price': 57127},
-                {'name': 'Skoda', 'price': 9000},
-                    {'name': 'Volvo', 'price': 29000},
-                        {'name': 'Bentley', 'price': 350000},
-                            {'name': 'Citroen', 'price': 21000},
-                                {'name': 'Hummer', 'price': 41400},
-                                    {'name': 'Volkswagen', 'price': 21600} ]
-
-#client = MongoClient('mongodb://localhost:27017/')
+import datetime
+cars = [ {'name': 'Audi', 'price': 52642,'dop': datetime.datetime(2020, 7, 29),'archivetos3': True},
+         {'name': 'Mercedes', 'price': 57127,'dop':datetime.datetime(2020,7,28)},
+         {'name': 'Skoda', 'price': 9000,'dop':datetime.datetime(2020,7, 27), 'archivetos3': True}
+        ]
 client=MongoClient("mongodb+srv://Trustwhere4u:Trustwhere4u@mymongocluster.cyhjc.mongodb.net/sample_airbnb?retryWrites=true&w=majority")
 
 with client:
